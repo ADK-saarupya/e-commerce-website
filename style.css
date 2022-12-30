@@ -1,0 +1,296 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar design */
+header{
+    width: 100%;
+    
+    
+}
+.navbar{
+    display:grid ;
+    grid-template-columns: 20% 80%;
+    height: 5rem;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+    padding-top: 11px;
+   
+}
+.logo{
+    
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logoStyle{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    
+}
+.logoText{
+    font-family: 'Inter', sans-serif;
+    font-size: small;
+    font-weight: 600;
+    
+}
+
+#searchItem{
+    width: 40rem;
+    height: 1.5rem;
+    padding-left: 5px;
+}
+.items{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.otherItem{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+#cart{
+    color: black;
+}
+.navItems{
+    margin: 1.2rem;
+}
+
+.navItems a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight:bolder;
+    font-size: 18px;
+    margin:0 1rem 0 1rem;
+    font-weight: 600;
+}
+.ellipse{
+    position: fixed;
+    z-index: -1;
+    height: 8rem;
+}
+.firstEllipse{
+    bottom: 0;
+    left: 0;
+}
+.secondEllipse{
+    bottom:0;
+    right: 0;   
+}
+.thirdEllipse{
+    top:10%;
+    right: 40%;
+}
+.fourthEllipse{
+    top:60%;
+    left: 50%;
+}
+
+
+/* Body Design */
+section{
+    width: 100%;
+}
+.products{
+    width:95%;
+    margin: auto;
+    padding-top: 0.4rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    
+}
+.productItem{
+    width: fit-content;
+    margin-bottom: 1.5rem;
+    
+}
+.productItem:hover{
+    box-shadow: 0px 0px 10px grey;
+    cursor: pointer;
+}
+.productImage{
+    width: 14rem;
+    height: 10rem;
+}
+.productInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: small;
+    width: 95%;
+    margin: auto;
+    background: white;
+
+}
+.productNamePrice p{
+    padding: 2px 0;
+}
+.productPrice{
+    font-size: 9px;
+    color: #0E26BB;
+}
+.productCart:hover{
+    box-shadow: 0px 0px 5px grey;
+   
+    
+}
+
+/* PopUp Item Design  */
+.popUpContent{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+   width: 60%;
+   margin: auto;
+   align-items: center;
+   justify-content: space-around;
+   background-color: white;
+   box-shadow: 0px 0px 5px grey;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 70%;
+   
+}
+.productPic{
+    height: 16rem;
+    width: 21rem;
+}
+.productInformation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.name{
+    font-weight: bolder;
+    font-size: 25px;
+}
+.itemPrice{
+    color: #0E26BB;
+}
+.colors{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    width: 90%;
+    
+}
+.productColor{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.color1{
+    background: black;
+}
+.color2{
+    background:aqua;
+}
+.quantity{
+     font-size: 18px;
+     padding: 1rem 0;
+}
+.addBtn{
+   margin: 1.5rem 0;
+   background-color: #87487D;
+   color: white;
+   border: none;
+   cursor: pointer;
+   width: 11rem;
+   height: 3rem;
+   font-size: 16px;
+}
+.crossMark{
+    color: red;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+/* blur background style */
+.blurbg{
+    filter: blur(15px);
+    pointer-events: none ;
+}
+
+/* Purchased Item List Design */
+.mainTitle,.total{
+    text-align: center;
+}
+.purchasedItem{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+    background: pink;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    background-color:rgb(229, 214, 186);
+    z-index: 1;
+    overflow: scroll;
+}
+.exit{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: red;
+    cursor: pointer;
+}
+.mainTitle{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto Serif', serif;
+    font-size: 25px;
+    padding: 1rem 0 0 0;
+
+}
+.purchasedProduct{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 1.5rem 0 1.5rem 0;
+}
+.itemInfo img{
+    width: 3rem;
+    height: 2rem;
+   
+}
+.productNamePriceImg{
+    display: flex;
+   
+}
+.itemNamePrice{
+    font-family: 'Inter', sans-serif;
+    padding-left: 0.8rem;
+}
+.itemQty{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+
+}
+.total{
+    font-family: 'Roboto Serif', serif;
+    padding-bottom: 2rem;
+    
+}
+.priceTag{
+     color: #0E26BB;
+     font-size: 20px;
+}
