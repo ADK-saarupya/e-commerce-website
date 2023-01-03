@@ -13,6 +13,7 @@
 <body>
     <header>
         <div class="navbar">
+            
             <div class="logo">
                 <p class="logoStyle">r2d2</p>
                 <p class="logoText">we gotchu!</p>
@@ -32,8 +33,8 @@
 
         </div>
         <div class="navItems">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="index.html" class="link linkActive">Home</a>
+            <a href="about.html" class="link">About Us</a>
         </div>
 
     </header>
@@ -50,22 +51,19 @@
         <div class="container">
             <p class="mainTitle">Your Bag</p>
             <div class="itemInfo">
-               
-
+              
             </div>
         </div>
         <div class="total">Total: <span class="priceTag">00</span></div>
     </div>
-
-
-
 
     <section>
         <div class="products">
             <!-- All Products display here... -->
            
         </div>
-
+        <p id="viewMore">view more<img src="./otherImage/rightArrow.png"></p>
+       
     </section>
 
     <!-- Popup display -->
@@ -73,11 +71,25 @@
        
     </section>
 
+    <!-- pop up Successful message after a product is added to cart -->
+    <section class="secondPopContent">
+        <div class="message">
+            <p>ITEM SUCCESSFULLY ADDED TO YOUR CART  <i class="fa-solid fa-circle-check fa-2x checkCircle"></i></p>
+            <button class="okBtn">OK</button>
+          
+          
+            
+            
+        </div>
+    </section>
+   
+
 
 
 
     <script src="https://kit.fontawesome.com/cdc83a5bc5.js" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
+   
 
 </body>
 

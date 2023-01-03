@@ -6,6 +6,7 @@
     padding: 0;
 }
 
+
 /* Navigation Bar design */
 header{
     width: 100%;
@@ -46,6 +47,13 @@ header{
     width: 40rem;
     height: 1.5rem;
     padding-left: 5px;
+    border-top-style:none ;
+    border-right-style:none ;
+    border-left-style:none ;
+    outline: none;
+    background-color: #eee;
+    margin-right: 0.8rem;
+
 }
 .items{
     display: grid;
@@ -57,13 +65,28 @@ header{
     
 }
 #cart{
-    color: black;
+    cursor: pointer;
+}
+#cart::after{
+    content:attr(data-count);
+        font-size:12px;
+        color: #fff;
+        background: #87487D;
+        border-radius:50%;
+        padding: 6px 7px;
+        position:relative;
+        left:-8px;
+        top:-15px;
+        opacity:0.9;
+        font-family: 'Inter',sans-serif;
+        visibility:var(--cartAfterVisibility, hidden); 
+        
 }
 .navItems{
     margin: 1.2rem;
 }
 
-.navItems a{
+.navItems .link{
     text-decoration: none;
     color: black;
     font-family: 'Inter', sans-serif;
@@ -71,6 +94,17 @@ header{
     font-size: 18px;
     margin:0 1rem 0 1rem;
     font-weight: 600;
+}
+.linkActive{
+    text-decoration: underline !important;
+    text-decoration-color: blue !important ;
+    text-decoration-thickness:3px !important;
+
+}
+.navItems a:hover{
+    text-decoration: underline ;
+    text-decoration-color: rgb(65, 65, 165);
+    text-decoration-thickness:3px;
 }
 .ellipse{
     position: fixed;
@@ -145,7 +179,23 @@ section{
     
 }
 
+/* Design view more text */
+#viewMore{
+    color: #0E26BB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+}
+#viewMore:hover{
+    text-shadow: 0px 0px 3px grey;
+}
+
 /* PopUp Item Design  */
+
 .popUpContent{
     display: flex;
     font-family: 'Inter', sans-serif;
@@ -220,6 +270,44 @@ section{
     cursor: pointer;
 }
 
+/* successful message popup design */
+.message{
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    height: 40%;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   top: 0;
+   right: 0;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+.message p{
+    font-size: larger;
+    font-weight: bold;
+}
+.checkCircle{
+    color: green;
+}
+.okBtn{
+    margin-top:1.8rem ;
+    width: 5rem;
+    height: 3rem;
+    border: none;
+    background-color: #87487D;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+
 /* blur background style */
 .blurbg{
     filter: blur(15px);
@@ -244,6 +332,7 @@ section{
     background-color:rgb(229, 214, 186);
     z-index: 1;
     overflow: scroll;
+    
 }
 .exit{
     position: absolute;
@@ -274,6 +363,8 @@ section{
 }
 .productNamePriceImg{
     display: flex;
+    align-items: center;
+    
    
 }
 .itemNamePrice{
@@ -284,6 +375,17 @@ section{
     font-size: 20px;
     font-family: 'Inter', sans-serif;
 
+}
+.circleCrossMark{
+    
+    cursor: pointer;
+    padding-right: 0.5rem;
+    opacity: 0.1;
+}
+.circleCrossMark:hover{
+    opacity: 1;
+    color: red;
+    transition: all 0.8s;
 }
 .total{
     font-family: 'Roboto Serif', serif;
